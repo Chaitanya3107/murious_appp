@@ -5,14 +5,16 @@ import 'package:murious_appp/app_colors.dart';
 
 class Home extends StatelessWidget {
   // home constructor which accepts userid i.e uid
-  Home({
-    Key? key,
-    required this.user,
-  }) : super(key: key);
+
+  // Home({
+  //   Key? key,
+  //   required this.user,
+  // }) : super(key: key);
 
   final AuthService _auth = AuthService();
+
   // passing uid from wrapper to home screen to display things
-  final UserObj user;
+  // final UserObj user;
 
   @override
   Widget build(BuildContext context) {

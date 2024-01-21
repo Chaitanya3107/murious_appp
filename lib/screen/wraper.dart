@@ -10,13 +10,16 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // us accessing user data from the provider to transfer them to different screen
-    final user = Provider.of<UserObj?>(context);
-    print(user);
 
-    if (user == null) {
-      return const Authenticate();
-    } else {
-      return Home(user: user);
-    }
+    // final user = Provider.of<UserObj?>(context);
+    // print(user);
+
+    // if (user == null) {
+    //   return const Authenticate();
+    // } else {
+    //   return Home(user: user);
+    // }
+
+    return Home();
   }
 }
