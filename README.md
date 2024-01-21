@@ -1,5 +1,3 @@
-Certainly! Here's the README file with the Database section:
-
 # Murious App
 
 Welcome to the Murious App repository! This Flutter-based mobile application is designed to enhance the experience of Murious, the annual tech fest of Jaypee University of Information Technology (JUIT).
