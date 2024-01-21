@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "81848111675",
+    "project_id": "murious-website-app",
+    "storage_bucket": "murious-website-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81848111675:android:a20ecf3423812b9b7ac21e",
+        "android_client_info": {
+          "package_name": "com.example.murious_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81848111675-u4p8ob50f1gqpeqrcjqmi963rru5oobr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.murious_app",
+            "certificate_hash": "b36625f2ac1e61124f2d9e66b146e69d8f0534c1"
+          }
+        },
+        {
+          "client_id": "81848111675-gvsfbbk5afrpd93a5be28frcmb79d2tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF6WNFPFpjfTqGKf4CPU8-rRZzyxSwZ3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81848111675-gvsfbbk5afrpd93a5be28frcmb79d2tq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "81848111675-35cka0jbfqgfd6d4avfqnhjl7knhp0j0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.muriousApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81848111675:android:4d6a97de3557e8b57ac21e",
+        "android_client_info": {
+          "package_name": "com.example.murious_appp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81848111675-gvsfbbk5afrpd93a5be28frcmb79d2tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF6WNFPFpjfTqGKf4CPU8-rRZzyxSwZ3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81848111675-gvsfbbk5afrpd93a5be28frcmb79d2tq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "81848111675-35cka0jbfqgfd6d4avfqnhjl7knhp0j0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.muriousApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

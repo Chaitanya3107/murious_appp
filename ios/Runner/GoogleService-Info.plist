@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>81848111675-erto48pemt9merab0h744ohs9ghp3mhi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.81848111675-erto48pemt9merab0h744ohs9ghp3mhi</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>81848111675-u4p8ob50f1gqpeqrcjqmi963rru5oobr.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBNYiZglRDGJlEZnBkjvKkc1BsoQYpFNDY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>81848111675</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.muriousAppp</string>
+	<key>PROJECT_ID</key>
+	<string>murious-website-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>murious-website-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:81848111675:ios:0ed42409bdcd35767ac21e</string>
+</dict>
+</plist>
