@@ -26,7 +26,7 @@ The Murious App serves as a companion to the event, providing users with easy ac
 
 2. **Navigate to the project directory:**
    ```bash
-   cd murious-app
+   cd murious-appp
    ```
 
 3. **Install dependencies:**
