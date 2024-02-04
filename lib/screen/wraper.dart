@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:murious_appp/models/user.dart';
 import 'package:murious_appp/screen/authenticate/authenticate.dart';
-import 'package:murious_appp/screen/home/home_bg.dart';
 import 'package:murious_appp/screen/navigation/Navigation.dart';
 import 'package:provider/provider.dart';
 
