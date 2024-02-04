@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:murious_appp/screen/authenticate/sign_in.dart';
+import 'package:murious_appp/screen/login_app/login/sign_in_ui.dart';
 
 class Authenticate extends StatefulWidget {
   const Authenticate({super.key});
@@ -11,6 +11,6 @@ class Authenticate extends StatefulWidget {
 class _AuthenticateState extends State<Authenticate> {
   @override
   Widget build(BuildContext context) {
-    return const SignIN();
+    return const SignInUi();
   }
 }

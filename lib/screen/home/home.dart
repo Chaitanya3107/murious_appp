@@ -1,40 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:murious_appp/models/user.dart';
+import 'package:murious_appp/screen/login_app/screens/login_screen/components/top_text.dart';
 import 'package:murious_appp/services/auth.dart';
-import 'package:murious_appp/app_colors.dart';
 
 class Home extends StatelessWidget {
-  // home constructor which accepts userid i.e uid
-
-  // Home({
-  //   Key? key,
-  //   required this.user,
-  // }) : super(key: key);
+  // Home constructor which accepts user id, i.e., uid
+  Home({
+    Key? key,
+    required this.user,
+  }) : super(key: key);
 
   final AuthService _auth = AuthService();
 
-  // passing uid from wrapper to home screen to display things
-  // final UserObj user;
+  // Passing uid from wrapper to home screen to display things
+  final UserObj user;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.homeLightBackground,
-      appBar: AppBar(
-        backgroundColor: AppColors.homeAppBarBackground,
-        elevation: 0.0,
-        title: const Text('Murious App'),
-        // actions are button appear at top right of app bar
-        actions: [
-          IconButton(
-              onPressed: () async {
-                // Access AuthService instance(_auth) to call signOutGoogle
-                await _auth.signOutGoogle();
-              },
-              color: AppColors.homeIconColor,
-              icon: const Icon(Icons.person))
-        ],
-      ),
+    return Stack(
+      children: [
+        const Positioned(
+          top: 136,
+          left: 24,
+          child: TopText(),
+        ),
+        Center(
+          child: ElevatedButton(
+            onPressed: () async {
+              await _auth.signOutGoogle();
+            },
+            child: const Text("Sign Out"),
+          ),
+        ),
+        const Align(
+          alignment: Alignment.bottomCenter,
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 50),
+          ),
+        ),
+      ],
     );
   }
 }
