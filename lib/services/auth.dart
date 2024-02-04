@@ -57,6 +57,7 @@ class AuthService {
       print('Error signing out with Google: $e');
       return null;
     }
+    return null;
   }
 
   Future<UserObj?> signInWithEmailAndPassword(

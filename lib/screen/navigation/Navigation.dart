@@ -39,17 +39,18 @@ class _NavigationState extends State<Navigation> {
     return Scaffold(
       body: Stack(
         children: [
+          _pages[_currentIndex],
           // Background screen
-          AnimatedSwitcher(
-            duration: const Duration(milliseconds: 300),
-            child: _pages[_currentIndex],
-            transitionBuilder: (child, animation) {
-              return FadeTransition(
-                opacity: animation,
-                child: child,
-              );
-            },
-          ),
+          // AnimatedSwitcher(
+          //   duration: const Duration(milliseconds: 300),
+          //   child: _pages[_currentIndex],
+          //   transitionBuilder: (child, animation) {
+          //     return FadeTransition(
+          //       opacity: animation,
+          //       child: child,
+          //     );
+          //   },
+          // ),
 
           // Navigation bar
           Positioned(
