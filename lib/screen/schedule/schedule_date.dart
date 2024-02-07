@@ -66,7 +66,7 @@ class DateSection extends StatelessWidget {
                 (startingDay + 1).toString(),
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 52,
+                  fontSize: 60,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -77,7 +77,7 @@ class DateSection extends StatelessWidget {
                 month,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 30,
                 ),
               ),
             ),

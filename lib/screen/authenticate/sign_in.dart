@@ -209,11 +209,12 @@ class _SignINState extends State<SignIN> {
     return Scaffold(
       body: Stack(
         children: [
-          const Positioned(
-            top: 136,
-            left: 24,
-            child: TopText(),
-          ),
+          // const Positioned(
+          //   top: 136,
+          //   left: 24,
+          //   child: TopText(),
+          // ),
+          TopText(),
           SingleChildScrollView(
             padding: const EdgeInsets.only(top: 330, bottom: 50),
             child: Column(

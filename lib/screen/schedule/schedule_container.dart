@@ -54,12 +54,12 @@ class ScheduleContainer extends StatelessWidget {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(22),
           child: Text(
             time,
             textAlign: TextAlign.start,
             style: const TextStyle(
-              fontSize: 16,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -71,7 +71,7 @@ class ScheduleContainer extends StatelessWidget {
             child: Text(
               event,
               style: const TextStyle(
-                fontSize: 25,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.normal,
                 color: Colors.white,
@@ -80,16 +80,16 @@ class ScheduleContainer extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(14),
-          child: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.arrow_forward_rounded,
-              color: Colors.white,
-            ),
-          ),
-        ),
+        // Padding(
+        //   padding: const EdgeInsets.all(14),
+        //   child: IconButton(
+        //     onPressed: () {},
+        //     icon: const Icon(
+        //       Icons.arrow_forward_rounded,
+        //       color: Colors.white,
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }

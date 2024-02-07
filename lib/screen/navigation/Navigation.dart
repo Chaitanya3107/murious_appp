@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:murious_appp/models/user.dart';
+import 'package:murious_appp/screen/contact/contact.dart';
+import 'package:murious_appp/screen/feedback/feedback.dart';
 import 'package:murious_appp/screen/home/home_ui.dart';
+import 'package:murious_appp/screen/profile/profile_ui.dart';
 import 'package:murious_appp/screen/schedule/schedule_ui.dart';
 
 class Navigation extends StatefulWidget {
@@ -26,7 +29,10 @@ class _NavigationState extends State<Navigation> {
     super.initState();
     _pages = [
       HomeUi(user: widget.user),
+      FeedbackUi(),
+      ContactUs(),
       ScheduleUi(user: widget.user),
+      ProfileUi(),
       // Add more screens as needed
       // ChecklistScreen(),
       // CalendarScreen(),
