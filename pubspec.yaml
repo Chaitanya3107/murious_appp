@@ -80,7 +80,7 @@ flutter:
   assets:
     - assets/images/google.png
     - assets/images/murious logo.png
-
+    - assets\images\img_image_454.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

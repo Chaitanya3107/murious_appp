@@ -1,30 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:murious_appp/screen/schedule/schedule_details.dart';
 
 class ScheduleContainer extends StatelessWidget {
-  final double height;
+  final List<ScheduleDetails> scheduleDetailsList;
 
-  const ScheduleContainer({Key? key, required this.height}) : super(key: key);
+  const ScheduleContainer({Key? key, required this.scheduleDetailsList})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      // padding: EdgeInsets.all(screenWidth * 0.03),
+      padding: EdgeInsets.fromLTRB(screenWidth * 0.03, screenWidth * 0.03,
+          screenWidth * 0.03, screenWidth * 0.08),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Adjust the values accordingly
           Container(
             width: double.infinity,
-            height: height,
             decoration: ShapeDecoration(
-              color: Colors.black.withOpacity(0.2),
+              gradient: LinearGradient(
+                begin: Alignment(-0.00, -1.00),
+                end: Alignment(0, 1),
+                colors: [Color(0xFF3E0858), Color(0xFF38022C)],
+              ),
+              // color: Colors.black.withOpacity(0.2),
               shape: RoundedRectangleBorder(
-                side: const BorderSide(width: 2.90, color: Colors.white),
-                borderRadius: BorderRadius.circular(22),
+                side:
+                    BorderSide(width: screenWidth * 0.005, color: Colors.white),
+                borderRadius: BorderRadius.circular(screenWidth * 0.06),
               ),
             ),
             child: Column(
-              children: _buildScheduleRows(),
+              children: scheduleDetailsList
+                  .map((details) => _buildScheduleRow(context, details))
+                  .toList(),
             ),
           ),
         ],
@@ -32,34 +44,18 @@ class ScheduleContainer extends StatelessWidget {
     );
   }
 
-  // Widget to build each row in the schedule
-  List<Widget> _buildScheduleRows() {
-    List<Widget> scheduleRows = [];
+  Widget _buildScheduleRow(BuildContext context, ScheduleDetails details) {
+    final screenWidth = MediaQuery.of(context).size.width;
 
-    // Schedule row 1
-    scheduleRows.add(_buildScheduleRow('5:00pm -\n6:00pm', 'The Expanse'));
-
-    // Schedule row 2
-    scheduleRows.add(_buildScheduleRow('5:00pm -\n6:00pm', 'The Expanse'));
-
-    // Schedule row 3
-    scheduleRows.add(_buildScheduleRow('5:00pm -\n6:00pm', 'The Expanse'));
-
-    // Add more rows as needed
-
-    return scheduleRows;
-  }
-
-  Widget _buildScheduleRow(String time, String event) {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.all(22),
+          padding: EdgeInsets.all(screenWidth * 0.05),
           child: Text(
-            time,
+            details.time,
             textAlign: TextAlign.start,
-            style: const TextStyle(
-              fontSize: 20,
+            style: TextStyle(
+              fontSize: screenWidth * 0.045,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -67,29 +63,18 @@ class ScheduleContainer extends StatelessWidget {
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(screenWidth * 0.02),
             child: Text(
-              event,
-              style: const TextStyle(
-                fontSize: 30,
+              details.event,
+              style: TextStyle(
+                fontSize: screenWidth * 0.07,
                 fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.normal,
                 color: Colors.white,
               ),
               textAlign: TextAlign.center,
             ),
           ),
         ),
-        // Padding(
-        //   padding: const EdgeInsets.all(14),
-        //   child: IconButton(
-        //     onPressed: () {},
-        //     icon: const Icon(
-        //       Icons.arrow_forward_rounded,
-        //       color: Colors.white,
-        //     ),
-        //   ),
-        // ),
       ],
     );
   }

@@ -1,46 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class DateSection extends StatelessWidget {
-//   final int startingDay; // Starting day for the date
-//   final String month;
-
-//   const DateSection({
-//     Key? key,
-//     required this.startingDay,
-//     required this.month,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       children: [
-//         Padding(
-//           padding: const EdgeInsets.fromLTRB(10, 10, 10, 4),
-//           child: Text(
-//             (startingDay + 1)
-//                 .toString(), // Add 2 to starting day for illustration
-//             style: const TextStyle(
-//               color: Colors.white,
-//               fontSize: 30,
-//               fontWeight: FontWeight.bold,
-//             ),
-//           ),
-//         ),
-//         Padding(
-//           padding: const EdgeInsets.fromLTRB(10, 2, 10, 10),
-//           child: Text(
-//             month,
-//             style: const TextStyle(
-//               color: Colors.white,
-//               fontSize: 20,
-//             ),
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 
 class DateSection extends StatelessWidget {
@@ -55,36 +12,99 @@ class DateSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Row(
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
+              padding: EdgeInsets.fromLTRB(
+                screenWidth * 0.04,
+                screenWidth * 0.012,
+                screenWidth * 0.022,
+                screenWidth * 0.002,
+              ), // Adjust padding based on screen width
               child: Text(
                 (startingDay + 1).toString(),
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
-                  fontSize: 60,
+                  fontSize: screenWidth *
+                      0.15, // Adjust font size based on screen width
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 10, 10),
+              padding: EdgeInsets.fromLTRB(
+                screenWidth * 0.04,
+                0,
+                screenWidth * 0.022,
+                screenWidth * 0.008,
+              ), // Adjust padding based on screen width
               child: Text(
                 month,
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30,
+                  fontSize: screenWidth *
+                      0.068, // Adjust font size based on screen width
                 ),
               ),
             ),
           ],
         ),
-        const Spacer(),
+        Spacer(),
       ],
     );
   }
 }
+
+
+// import 'package:flutter/material.dart';
+
+// class DateSection extends StatelessWidget {
+//   final int startingDay; // Starting day for the date
+//   final String month;
+
+//   const DateSection({
+//     Key? key,
+//     required this.startingDay,
+//     required this.month,
+//   }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(
+//       children: [
+//         Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
+//               child: Text(
+//                 (startingDay + 1).toString(),
+//                 style: const TextStyle(
+//                   color: Colors.white,
+//                   fontSize: 60,
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.fromLTRB(20, 0, 10, 10),
+//               child: Text(
+//                 month,
+//                 style: const TextStyle(
+//                   color: Colors.white,
+//                   fontSize: 30,
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//         const Spacer(),
+//       ],
+//     );
+//   }
+// }
