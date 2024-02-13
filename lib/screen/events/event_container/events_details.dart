@@ -87,9 +87,6 @@
 //   }
 // }
 
-import 'package:flutter/material.dart';
-import 'package:murious_appp/screen/events/event_container/events_container.dart';
-
 // class EventDetails extends StatefulWidget {
 //   const EventDetails({
 //     super.key,
@@ -248,6 +245,9 @@ import 'package:murious_appp/screen/events/event_container/events_container.dart
 
 // In the EventDetails widget:
 
+import 'package:flutter/material.dart';
+import 'package:murious_appp/screen/events/event_container/events_container.dart';
+
 class EventDetails extends StatefulWidget {
   final String? selectedDate; // New property to hold the selected date
   const EventDetails({
@@ -267,6 +267,8 @@ List<EventContainer> eventList = [
     eventTime: "6:00 pm-8:00 pm",
     eventVenue: "CL5",
     date: '15th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu libero',
   ),
   EventContainer(
     date: '16th',
@@ -275,6 +277,8 @@ List<EventContainer> eventList = [
     eventDate: "16th Mar",
     eventTime: "8:00 pm-9:00 pm",
     eventVenue: "LT1&LT2",
+    eventDescription:
+        'consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -283,6 +287,8 @@ List<EventContainer> eventList = [
     eventTime: "5.30 pm-6:30 pm",
     eventVenue: "CR8",
     date: '17th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -291,6 +297,8 @@ List<EventContainer> eventList = [
     eventTime: "6.30 pm-7:30 pm",
     eventVenue: "CR8",
     date: '15th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -299,6 +307,8 @@ List<EventContainer> eventList = [
     eventTime: "1.30 pm-2:30 pm",
     eventVenue: "CR8",
     date: '16th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -307,6 +317,8 @@ List<EventContainer> eventList = [
     eventTime: "3.30 pm-4:30 pm",
     eventVenue: "CR8",
     date: '17th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -315,6 +327,8 @@ List<EventContainer> eventList = [
     eventTime: "12.30 pm-1:30 pm",
     eventVenue: "CR8",
     date: '15th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -323,6 +337,8 @@ List<EventContainer> eventList = [
     eventTime: "11.30 pm-12:30 pm",
     eventVenue: "CR8",
     date: '16th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -331,6 +347,8 @@ List<EventContainer> eventList = [
     eventTime: "10.30 pm-11:30 pm",
     eventVenue: "CR8",
     date: '17th',
+    eventDescription:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula.In efficitur arcu libero,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada dui nunc, sed tincidunt ligula fringilla et. Donec commodo purus ut lacus ultrices consectetur. Nullam eros neque, lobortis nec interdum in, sollicitudin scelerisque ligula. In efficitur arcu lib',
   ),
 ];
 // In the _EventDetailsState class:
@@ -359,6 +377,7 @@ class _EventDetailsState extends State<EventDetails> {
                   eventTime: event.eventTime,
                   eventVenue: event.eventVenue,
                   date: event.date,
+                  eventDescription: event.eventDescription,
                 );
               } else {
                 return SizedBox(); // Return an empty container if date doesn't match

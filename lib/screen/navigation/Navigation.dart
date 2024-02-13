@@ -30,6 +30,7 @@ class _NavigationState extends State<Navigation> {
     _pages = [
       HomeUi(user: widget.user),
       EventsUi(user: widget.user),
+      // EventDescUi(user: widget.user, eventName: '',),
       ContactUs(),
       ScheduleUi(user: widget.user),
       ProfileUi(),

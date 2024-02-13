@@ -8,8 +8,8 @@ class EventContainer extends StatelessWidget {
   final String eventTime;
   final String eventVenue;
   final String date;
+  final String eventDescription;
   // final String eventDescp;
-
   const EventContainer({
     Key? key,
     required this.backgroundImagePath,
@@ -18,7 +18,7 @@ class EventContainer extends StatelessWidget {
     required this.eventTime,
     required this.eventVenue,
     required this.date,
-    // required this.eventDescp,
+    required this.eventDescription,
   }) : super(key: key);
 
   @override
@@ -79,6 +79,7 @@ class EventContainer extends StatelessWidget {
                 eventName: eventName,
                 eventTime: eventTime,
                 eventVenue: eventVenue,
+                eventDescription: eventDescription,
               ),
             ),
 
