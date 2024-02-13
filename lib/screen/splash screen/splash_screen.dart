@@ -37,9 +37,8 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
       width: double.infinity,
       height: double.infinity,
-      // child: Lottie.asset('assets/images/Flow 6.json'),
-      child: Lottie.asset('assets/images/Flow 20.json'),
-      // child: Lottie.asset('assets/images/Flow 22.json'),
+      // child: Lottie.asset('assets/images/Flow 20.json'),
+      child: Lottie.asset('assets/images/Flow 32.json'),
       // child: Stack(
       //   children: [
       //     Center(child: Lottie.asset('assets/images/Flow 20.json')),
