@@ -7,8 +7,6 @@ class ContactUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double screenHeight = MediaQuery.of(context).size.height;
-
     return const Scaffold(
       backgroundColor: Colors.transparent,
       body: Stack(
@@ -17,8 +15,6 @@ class ContactUs extends StatelessWidget {
           ContactPage()
         ],
       ),
-
-      // bottomNavigationBar: Navigation(user: user),
     );
   }
 }

@@ -15,8 +15,6 @@ class ProfileUi extends StatelessWidget {
           ProfilePage(),
         ],
       ),
-
-      // bottomNavigationBar: Navigation(user: user),
     );
   }
 }

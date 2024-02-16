@@ -32,7 +32,7 @@ List<List<ScheduleDetails>> scheduleList = [
 ];
 
 class _ScheduleState extends State<Schedule> {
-  final List<int> startingDays = [14, 15, 16]; // Your list of starting days
+  final List<int> startingDays = [7, 8, 9]; // Your list of starting days
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class _ScheduleState extends State<Schedule> {
             'Schedule',
             style: TextStyle(
               fontSize:
-                  screenWidth * 0.13, // Adjust font size based on screen width
+                  screenWidth * 0.12, // Adjust font size based on screen width
               fontWeight: FontWeight.bold,
               fontFamily: 'Montserrat',
               color: Colors.white,

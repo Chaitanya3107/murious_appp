@@ -52,6 +52,9 @@ dependencies:
   animated_splash_screen: ^1.3.0
   lottie: ^3.0.0
   flutter_native_splash: ^2.3.10
+  firebase_messaging: ^14.7.15
+  shared_preferences: ^2.2.2
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -92,6 +95,18 @@ flutter:
     - assets\images\img_image_454.png
     - assets\images\Flow 20.json
     - assets\images\Flow 32.json
+    - assets\images\carosuel\1Attack on Titan.jpg
+    - assets\images\carosuel\5k-mercedes-amg-g63-4x4-dp-3840x2160.jpg
+    - assets\images\carosuel\2022-The-Batman.jpg
+    - assets\images\carosuel\dark-legacy-of-black-spider-man-rj-3840x2160.jpg
+    - assets\images\carosuel\game-of-thrones-season-8-2019-tc-3840x2160.jpg
+    - assets\images\carosuel\night-king-game-of-thrones-season-8-poster-v2-3840x2160.jpg
+    - assets\images\carosuel\spider-man-2099-a-hero-from-the-future-js-5120x2880.jpg
+    - assets\images\carosuel\spiderman-2-ps5-2023-5k-b7-3840x2160.jpg
+    - assets\images\carosuel\uthe-flash-barry-allen-2023-61-3840x2160.jpg
+    - assets\images\carosuel\venom-vs-spider-man-final-stand-ay-3840x2160.jpg
+    - assets\images\carosuel\zoom.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -15,8 +15,6 @@ class FeedbackUi extends StatelessWidget {
           FeedbackScreen()
         ],
       ),
-
-      // bottomNavigationBar: Navigation(user: user),
     );
     ;
   }

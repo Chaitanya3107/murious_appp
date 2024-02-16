@@ -21,8 +21,6 @@ class ScheduleUi extends StatelessWidget {
           Schedule(user: user), // Content on top of the background
         ],
       ),
-
-      // bottomNavigationBar: Navigation(user: user),
     );
   }
 }

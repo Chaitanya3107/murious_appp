@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:murious_appp/models/user.dart';
-import 'package:murious_appp/screen/login_app/screens/login_screen/components/top_text.dart';
+import 'package:murious_appp/screen/home/carousel/Carousel.dart';
 import 'package:murious_appp/services/auth.dart';
 
 class Home extends StatelessWidget {
@@ -17,28 +17,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        const Positioned(
-          top: 136,
-          left: 24,
-          child: TopText(),
-        ),
-        Center(
-          child: ElevatedButton(
-            onPressed: () async {
-              await _auth.signOutGoogle();
-            },
-            child: const Text("Sign Out"),
-          ),
-        ),
-        const Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 50),
-          ),
-        ),
-      ],
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: ComplicatedImageDemo(),
     );
   }
 }

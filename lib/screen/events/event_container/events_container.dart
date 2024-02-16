@@ -38,7 +38,7 @@ class EventContainer extends StatelessWidget {
       child: Container(
         // alignment: Alignment.center, // Center its children
         width: double.infinity, // Take full width
-        height: screenHeight * 0.42, // 40% of screen height
+        height: screenHeight * 0.43, // 40% of screen height
         clipBehavior: Clip.antiAlias, // Clip overflow
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(
@@ -92,8 +92,8 @@ class EventContainer extends StatelessWidget {
                 screenWidth * 0.00, // bottom
               ),
               child: Container(
-                padding: EdgeInsets.only(
-                    top: screenWidth * 0.013), // Adjust top padding
+                // padding: EdgeInsets.only(
+                //     top: screenWidth * 0.013), // Adjust top padding
                 width: screenWidth * 0.12, // 10% of screen width
                 height: screenWidth * 0.146, // 15% of screen width
                 decoration: ShapeDecoration(
@@ -108,14 +108,16 @@ class EventContainer extends StatelessWidget {
                     borderRadius: BorderRadius.circular(screenWidth * 0.025),
                   ),
                 ),
-                child: Text(
-                  eventDate,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: screenWidth * 0.04,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w400,
+                child: Center(
+                  child: Text(
+                    eventDate,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: screenWidth * 0.04,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
               ),
