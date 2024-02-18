@@ -93,17 +93,34 @@ class _AppSettingState extends State<AppSetting> {
                 child: Container(
                   width: double.infinity,
                   height: screenWidth * 0.2,
-                  decoration: ShapeDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment(-0.00, -1.00),
                       end: Alignment(0, 1),
                       colors: [Color(0xFF3E0858), Color(0xFF38022C)],
                     ),
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                          width: screenWidth * 0.005, color: Colors.white),
-                      borderRadius: BorderRadius.circular(screenWidth * 0.06),
+                    borderRadius: BorderRadius.circular(screenWidth * 0.06),
+                    border: Border.all(
+                      width: screenWidth * 0.005,
+                      // color: Colors.white
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromARGB(255, 223, 213, 213),
+                        offset: const Offset(
+                          2,
+                          1,
+                        ),
+                        blurRadius: 0,
+                        spreadRadius: 0,
+                      ), //BoxShadow
+                      BoxShadow(
+                        color: const Color.fromARGB(255, 223, 213, 213),
+                        offset: const Offset(1.0, -0.1),
+                        blurRadius: 0.0,
+                        spreadRadius: 0.0,
+                      ), //BoxShadow
+                    ],
                   ),
                   child: Row(
                     children: [

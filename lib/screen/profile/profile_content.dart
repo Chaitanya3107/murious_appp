@@ -17,7 +17,6 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
 
     return SingleChildScrollView(
       child: Center(

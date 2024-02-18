@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:murious_appp/models/user.dart';
 import 'package:murious_appp/screen/home/carousel/carousel_state.dart';
+import 'package:murious_appp/screen/home/major_events/major_event_state.dart';
 import 'package:murious_appp/screen/notification/firebase_api.dart';
 import 'package:murious_appp/screen/splash%20screen/splash_screen.dart';
 import 'package:murious_appp/services/auth.dart';
@@ -28,6 +29,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<CarouselState>(create: (_) => CarouselState()),
+        ChangeNotifierProvider<MajorEventState>(
+            create: (_) => MajorEventState()),
         // Add other providers if needed
       ],
       // wraping it into provider widget to provide auth change to wraper to decide which screen to transfer

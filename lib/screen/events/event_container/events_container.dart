@@ -96,17 +96,34 @@ class EventContainer extends StatelessWidget {
                 //     top: screenWidth * 0.013), // Adjust top padding
                 width: screenWidth * 0.12, // 10% of screen width
                 height: screenWidth * 0.146, // 15% of screen width
-                decoration: ShapeDecoration(
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment(-0.00, -1.00),
                     end: Alignment(0, 1),
                     colors: [Color(0xFF3E0858), Color(0xFF38022C)],
                   ),
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                        width: screenWidth * 0.005, color: Colors.white),
-                    borderRadius: BorderRadius.circular(screenWidth * 0.025),
+                  borderRadius: BorderRadius.circular(screenWidth * 0.025),
+                  border: Border.all(
+                    width: screenWidth * 0.005,
+                    // color: Colors.white
                   ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(255, 223, 213, 213),
+                      offset: const Offset(
+                        1,
+                        1,
+                      ),
+                      blurRadius: 0,
+                      spreadRadius: 0,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: const Color.fromARGB(255, 223, 213, 213),
+                      offset: const Offset(1.0, -0.1),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ), //BoxShadow
+                  ],
                 ),
                 child: Center(
                   child: Text(

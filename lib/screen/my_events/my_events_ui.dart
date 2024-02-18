@@ -13,6 +13,7 @@ class MyEventUi extends StatelessWidget {
         children: [
           FigmaToCodeApp(), // Background
           MyEvent(),
+          // MajorHomeDetails(),
         ],
       ),
 
