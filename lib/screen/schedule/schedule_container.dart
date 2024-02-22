@@ -72,8 +72,9 @@ class ScheduleContainer extends StatelessWidget {
             textAlign: TextAlign.start,
             style: TextStyle(
               fontSize: screenWidth * 0.045,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w600,
               color: Colors.white,
+              fontFamily: 'Murious',
             ),
           ),
         ),
@@ -84,8 +85,9 @@ class ScheduleContainer extends StatelessWidget {
               details.event,
               style: TextStyle(
                 fontSize: screenWidth * 0.07,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w600,
                 color: Colors.white,
+                fontFamily: 'Murious',
               ),
               textAlign: TextAlign.center,
             ),

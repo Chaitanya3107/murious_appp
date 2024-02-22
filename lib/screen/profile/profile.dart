@@ -41,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.08,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Murious',
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-class Loading extends StatelessWidget {
-  const Loading({super.key});
+class Loading2 extends StatelessWidget {
+  const Loading2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,8 +10,7 @@ class Loading extends StatelessWidget {
       color: Colors.transparent,
       child: const Center(
         child: SpinKitRing(
-          color: Color.fromARGB(255, 0, 0, 0),
-          // color: Colors.white,
+          color: Colors.white,
           size: 50.0,
           lineWidth: 5.0,
         ),

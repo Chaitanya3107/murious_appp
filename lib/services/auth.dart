@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:murious_appp/models/user.dart';
+import 'package:murious_appp/services/database.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -40,6 +41,7 @@ class AuthService {
 
       // Return UserObj based on the signed-in user
       return _userFromFirebaseUser(userCredential.user);
+      await DatabaseService(uid: userCredential.user!.uid);
     } catch (e) {
       // Handle the error, you can print it for debugging purposes
       print('Error signing in with Google: $e');
@@ -67,6 +69,7 @@ class AuthService {
           email: email, password: password);
       User user = result.user!;
       return _userFromFirebaseUser(user);
+      await DatabaseService(uid: user.uid);
     } catch (e) {
       // Handle specific error cases
       if (e is FirebaseAuthException) {

@@ -49,7 +49,7 @@ class ContactPage extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white, // Text color
                   fontSize: screenWidth * 0.13, // Font size
-                  fontFamily: 'Poppins', // Font family
+                  fontFamily: 'Murious', // Font family
                   fontWeight: FontWeight.w600, // Font weight
                   height: 0,
                 ),
@@ -96,7 +96,7 @@ class ContactPage extends StatelessWidget {
               style: TextStyle(
                 color: Colors.white, // Text color
                 fontSize: screenWidth * 0.048, // Font size
-                fontFamily: 'Poppins', // Font family
+                fontFamily: 'Murious', // Font family
                 fontWeight: FontWeight.w500, // Font weight
                 height: 0,
               ),

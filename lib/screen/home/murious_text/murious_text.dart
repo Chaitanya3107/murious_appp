@@ -6,22 +6,33 @@ class MuriousText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: EdgeInsets.fromLTRB(
-        screenWidth * 0.05, // left
-        screenWidth * 0.06, // top
-        screenWidth * 0.05, // right
-        screenWidth * 0.00, // bottom
-      ),
-      child: Text(
-        "Murious is good",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: screenWidth * 0.12,
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w400,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Center(
+          child: Text(
+            "Murious",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: screenWidth * 0.12,
+              fontFamily: 'Murious',
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ),
-      ),
+        Center(
+          child: Text(
+            "The Three Days Panorama",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: screenWidth * 0.082,
+              fontFamily: 'Murious',
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -64,7 +64,7 @@ class _ScheduleState extends State<Schedule> {
               fontSize:
                   screenWidth * 0.12, // Adjust font size based on screen width
               fontWeight: FontWeight.bold,
-              fontFamily: 'Montserrat',
+              fontFamily: 'Murious',
               color: Colors.white,
             ),
           ),

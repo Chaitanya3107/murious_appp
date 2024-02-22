@@ -39,7 +39,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.062,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Murious',
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),
@@ -89,7 +89,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.062,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Murious',
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),
@@ -139,7 +139,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.062,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Murious',
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),
@@ -189,7 +189,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.062,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Murious',
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),
@@ -256,6 +256,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
                             backgroundColor: Colors.transparent,
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
+                            fontFamily: 'Murious',
                           ),
                         ),
                       ),

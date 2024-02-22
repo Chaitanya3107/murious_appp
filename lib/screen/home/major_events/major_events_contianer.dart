@@ -52,14 +52,33 @@ class MajorEventContainer extends StatelessWidget {
                   alignment: Alignment.center,
                   width: screenWidth * 0.85, // 90% of screen width
                   height: screenHeight * 0.3, // 30% of screen height
-                  decoration: ShapeDecoration(
+                  decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(backgroundImagePath),
                       fit: BoxFit.fill, // Fill the container
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(screenWidth * 0.06),
+                    borderRadius: BorderRadius.circular(screenWidth * 0.055),
+                    border: Border.all(
+                      color: Colors.white,
+                      width: screenWidth * 0.003,
                     ),
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: Color.fromARGB(255, 223, 213, 213),
+                    //     offset: const Offset(
+                    //       2,
+                    //       1,
+                    //     ),
+                    //     blurRadius: 0,
+                    //     spreadRadius: 0,
+                    //   ), //BoxShadow
+                    //   BoxShadow(
+                    //     color: const Color.fromARGB(255, 223, 213, 213),
+                    //     offset: const Offset(2.0, 2),
+                    //     blurRadius: 0.0,
+                    //     spreadRadius: 0.0,
+                    //   ), //BoxShadow
+                    // ],
                   ),
                 ),
                 // ),
@@ -123,8 +142,8 @@ class MajorEventContainer extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: screenWidth * 0.04,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Murious',
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),

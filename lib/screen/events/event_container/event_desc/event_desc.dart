@@ -80,7 +80,7 @@ class EventDesc extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.1,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Murious',
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -101,7 +101,7 @@ class EventDesc extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: screenWidth * 0.05,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Murious',
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -110,7 +110,7 @@ class EventDesc extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: screenWidth * 0.05,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Murious',
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -133,7 +133,7 @@ class EventDesc extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: screenWidth * 0.05,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Murious',
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -142,7 +142,7 @@ class EventDesc extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: screenWidth * 0.05,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Murious',
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -170,8 +170,8 @@ class EventDesc extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: screenWidth * 0.12,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Murious',
+                        fontWeight: FontWeight.w500,
                         letterSpacing: 0.5,
                       ),
                     ),
@@ -195,8 +195,8 @@ class EventDesc extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: screenWidth * 0.05,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w300,
+                              fontFamily: 'Murious',
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),

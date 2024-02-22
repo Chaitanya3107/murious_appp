@@ -83,7 +83,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: screenWidth * 0.048,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Murious',
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),
@@ -110,7 +110,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: screenWidth * 0.04,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Murious',
                             fontWeight: FontWeight.w400,
                             height: 0,
                           ),
@@ -137,7 +137,8 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                             },
                             decoration: InputDecoration(
                               hintText: 'Leave a comment',
-                              hintStyle: TextStyle(color: Colors.white),
+                              hintStyle: TextStyle(
+                                  color: Colors.white, fontFamily: 'Murious'),
                               fillColor: Colors.black.withOpacity(0.2),
                               filled: true,
                               border: OutlineInputBorder(
@@ -167,8 +168,8 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                             child: Text(
                               'Submit',
                               style: TextStyle(
-                                fontSize: screenWidth * 0.044,
-                              ),
+                                  fontSize: screenWidth * 0.044,
+                                  fontFamily: 'Murious'),
                             ),
                           ),
                         ],

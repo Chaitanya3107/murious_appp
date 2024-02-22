@@ -70,7 +70,7 @@ class _AppSettingState extends State<AppSetting> {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: screenWidth * 0.13,
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Murious',
                   fontWeight: FontWeight.w600,
                   height: 0,
                 ),
@@ -131,8 +131,8 @@ class _AppSettingState extends State<AppSetting> {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: screenWidth * 0.08,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Murious',
+                            fontWeight: FontWeight.w500,
                             height: 0,
                           ),
                         ),

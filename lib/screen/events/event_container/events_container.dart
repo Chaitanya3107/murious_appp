@@ -38,7 +38,7 @@ class EventContainer extends StatelessWidget {
       child: Container(
         // alignment: Alignment.center, // Center its children
         width: double.infinity, // Take full width
-        height: screenHeight * 0.43, // 40% of screen height
+        height: screenHeight * 0.435, // 40% of screen height
         clipBehavior: Clip.antiAlias, // Clip overflow
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(
@@ -60,14 +60,34 @@ class EventContainer extends StatelessWidget {
                 alignment: Alignment.center,
                 width: screenWidth * 0.9, // 90% of screen width
                 height: screenHeight * 0.3, // 30% of screen height
-                decoration: ShapeDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(backgroundImagePath),
                     fit: BoxFit.fill, // Fill the container
                   ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(screenWidth * 0.06),
+                  borderRadius: BorderRadius.circular(screenWidth * 0.055),
+                  border: Border.all(
+                    color: Colors.white,
+                    width: screenWidth * 0.003,
+                    // color: Colors.white
                   ),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: Color.fromARGB(255, 223, 213, 213),
+                  //     offset: const Offset(
+                  //       2,
+                  //       1,
+                  //     ),
+                  //     blurRadius: 0,
+                  //     spreadRadius: 0,
+                  //   ), //BoxShadow
+                  //   BoxShadow(
+                  //     color: const Color.fromARGB(255, 223, 213, 213),
+                  //     offset: const Offset(1.0, -0.1),
+                  //     blurRadius: 0.0,
+                  //     spreadRadius: 0.0,
+                  //   ), //BoxShadow
+                  // ],
                 ),
               ),
               // ),
@@ -132,7 +152,7 @@ class EventContainer extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: screenWidth * 0.04,
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Murious',
                       fontWeight: FontWeight.w400,
                     ),
                   ),

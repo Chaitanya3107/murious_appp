@@ -121,7 +121,14 @@ flutter:
   fonts:
     - family: Murious
       fonts:
-        - asset: assets\fonts\Valorant Font.ttf
+        - asset: assets\fonts\Switzer-Black.otf
+        - asset: assets\fonts\Switzer-Bold.otf
+        - asset: assets\fonts\Switzer-Extralight.otf
+        - asset: assets\fonts\Switzer-Medium.otf
+        - asset: assets\fonts\Switzer-Light.otf
+        - asset: assets\fonts\Switzer-Regular.otf
+        - asset: assets\fonts\Switzer-Semibold.otf
+        - asset: assets\fonts\Switzer-Thin.otf
           
   #
   # For details regarding fonts from package dependencies,

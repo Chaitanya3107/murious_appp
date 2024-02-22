@@ -21,7 +21,7 @@ class DateSection extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.04,
+                screenWidth * 0.06,
                 screenWidth * 0.012,
                 screenWidth * 0.022,
                 screenWidth * 0.002,
@@ -33,12 +33,13 @@ class DateSection extends StatelessWidget {
                   fontSize: screenWidth *
                       0.15, // Adjust font size based on screen width
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Murious',
                 ),
               ),
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.04,
+                screenWidth * 0.06,
                 0,
                 screenWidth * 0.022,
                 screenWidth * 0.008,
@@ -46,10 +47,11 @@ class DateSection extends StatelessWidget {
               child: Text(
                 month,
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: screenWidth *
-                      0.068, // Adjust font size based on screen width
-                ),
+                    color: Colors.white,
+                    fontSize: screenWidth *
+                        0.068, // Adjust font size based on screen width
+                    fontFamily: 'Murious',
+                    fontWeight: FontWeight.w500),
               ),
             ),
           ],

@@ -38,8 +38,8 @@ class MajorHomeDetails extends StatelessWidget {
                 (screenWidth * 0.98), // Adjust aspect ratio to fit the screen
             viewportFraction: 0.9,
             autoPlay: true,
-            autoPlayInterval: Duration(milliseconds: 3000),
-            autoPlayAnimationDuration: Duration(milliseconds: 800),
+            autoPlayInterval: Duration(milliseconds: 3200),
+            autoPlayAnimationDuration: Duration(milliseconds: 1000),
             onPageChanged: (index, reason) {
               majorEventState.setCurrentIndex(index); // Update current index
             },

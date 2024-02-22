@@ -61,7 +61,7 @@ class _EventsPageState extends State<EventsPage> {
             padding: EdgeInsets.fromLTRB(screenWidth * 0.76,
                 screenWidth * 0.028, screenWidth * 0.04, screenWidth * 0.05),
             child: Container(
-              width: screenWidth * 0.175,
+              width: screenWidth * 0.199,
               height: screenWidth * 0.08,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -93,12 +93,12 @@ class _EventsPageState extends State<EventsPage> {
                 ],
               ),
               child: DropdownButton<String>(
-                padding: EdgeInsets.only(left: screenWidth * 0.015),
+                padding: EdgeInsets.only(left: screenWidth * 0.026),
                 borderRadius: BorderRadius.circular(screenWidth * 0.03),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: screenWidth * 0.04,
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Murious',
                   fontWeight: FontWeight.w500,
                 ),
                 dropdownColor:
@@ -116,8 +116,8 @@ class _EventsPageState extends State<EventsPage> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: screenWidth * 0.04,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Murious',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 value: valueChoose,

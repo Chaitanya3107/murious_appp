@@ -265,7 +265,7 @@ class ComplicatedImageDemo extends StatelessWidget {
           carouselController: controller,
           options: CarouselOptions(
             autoPlay: true,
-            autoPlayInterval: Duration(milliseconds: 3000),
+            autoPlayInterval: Duration(milliseconds: 3200),
             autoPlayAnimationDuration: Duration(milliseconds: 1000),
             aspectRatio: 16 / 9,
             enlargeCenterPage: true,

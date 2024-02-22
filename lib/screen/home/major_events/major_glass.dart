@@ -65,7 +65,7 @@ class MajorEventGlass extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: screenWidth * 0.062,
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Murious',
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -75,7 +75,7 @@ class MajorEventGlass extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: screenWidth * 0.042,
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Murious',
                   fontWeight: FontWeight.w400,
                 ),
               ),

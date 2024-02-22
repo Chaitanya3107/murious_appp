@@ -45,8 +45,9 @@ class EventGlass extends StatelessWidget {
             screenWidth * 0.00,
           ),
           child: Container(
-            width: screenWidth * 0.7,
-            height: screenWidth * 0.3,
+            alignment: Alignment.center,
+            width: screenWidth * 0.79,
+            height: screenWidth * 0.35,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment(-0.00, -1.00),
@@ -76,99 +77,93 @@ class EventGlass extends StatelessWidget {
                 ), //BoxShadow
               ],
             ),
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.05,
-                screenWidth * 0.00,
-                screenWidth * 0.00,
-                screenWidth * 0.03,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Event name and forward arrow button
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        eventName,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: screenWidth * 0.07,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                        ),
+            // child: Padding(
+            //   padding: EdgeInsets.fromLTRB(
+            //     screenWidth * 0.05,
+            //     screenWidth * 0.00,
+            //     screenWidth * 0.00,
+            //     screenWidth * 0.03,
+            //   ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Event name and forward arrow button
+                // Padding(
+                // padding: EdgeInsets.fromLTRB(
+                //   screenWidth * 0.14,
+                //   screenWidth * 0.00,
+                //   screenWidth * 0.00,
+                //   screenWidth * 0.00,
+                // ),
+                // child:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      eventName,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: screenWidth * 0.074,
+                        fontFamily: 'Murious',
+                        fontWeight: FontWeight.w500,
                       ),
-                      IconButton(
-                        onPressed: () {
-                          // Navigate to EventDescUi with necessary details
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => EventDescUi(
-                                eventName: eventName,
-                                eventTime: eventTime,
-                                eventVenue: eventVenue,
-                                eventDescription: eventDescription,
-                              ),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        // Navigate to EventDescUi with necessary details
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EventDescUi(
+                              eventName: eventName,
+                              eventTime: eventTime,
+                              eventVenue: eventVenue,
+                              eventDescription: eventDescription,
                             ),
-                          );
-                        },
-                        icon: Icon(
-                          Icons.arrow_forward,
-                          color: Colors.white,
-                          size: screenWidth * 0.1,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: screenWidth * 0.002),
-                  // Event time and venue details
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(
-                          screenWidth * 0.1,
-                          screenWidth * 0.00,
-                          screenWidth * 0.00,
-                          screenWidth * 0.00,
-                        ),
-                        child: Text(
-                          eventTime,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: screenWidth * 0.04,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
                           ),
-                        ),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                        size: screenWidth * 0.1,
                       ),
-                      SizedBox(width: screenWidth * 0.04),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(
-                          screenWidth * 0.00,
-                          screenWidth * 0.00,
-                          screenWidth * 0.00,
-                          screenWidth * 0.00,
-                        ),
-                        child: Text(
-                          eventVenue,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: screenWidth * 0.04,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
+                    ),
+                  ],
+                ),
+                // ),
+                // SizedBox(height: screenWidth * 0.002),
+                // Event time and venue details
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      eventTime,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: screenWidth * 0.045,
+                        fontFamily: 'Murious',
+                        fontWeight: FontWeight.w400,
                       ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                    SizedBox(width: screenWidth * 0.04),
+                    Text(
+                      eventVenue,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: screenWidth * 0.045,
+                        fontFamily: 'Murious',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
+            // ),
           ),
         ),
       ),
