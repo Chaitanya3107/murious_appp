@@ -1,35 +1,22 @@
-// import 'package:firebase_core/firebase_core.dart';
-// import 'package:firebase_database/firebase_database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:murious_appp/services/auth.dart';
 
-// class FirebaseService {
-//   static final FirebaseService _instance = FirebaseService._internal();
+final String? uid = AuthService().getCurrentUid();
+Future<void> sendFeedback(double rating, String feedback) async {
+  try {
+    // Push the rating and feedback data to the database
+    // await feedbackRef.push().set({
+    //   'rating': rating,
+    //   'feedback': feedback,
+    //   'timestamp': DateTime.now().millisecondsSinceEpoch,
+    // });
+    await FirebaseFirestore.instance
+        .collection('registeredEvents')
+        .doc(uid)
+        .update({'rating': rating, 'feedback': feedback});
 
-//   factory FirebaseService() {
-//     return _instance;
-//   }
-
-//   FirebaseService._internal();
-
-//   Future<void> initializeApp() async {
-//     await Firebase.initializeApp();
-//   }
-
-//   Future<void> sendFeedback(double rating, String feedback) async {
-//     try {
-//       // Get a reference to the realtime database
-//       final FirebaseDatabase database = FirebaseDatabase.instance;
-//       DatabaseReference feedbackRef = database.reference().child('feedback');
-
-//       // Push the rating and feedback data to the database
-//       await feedbackRef.push().set({
-//         'rating': rating,
-//         'feedback': feedback,
-//         'timestamp': DateTime.now().millisecondsSinceEpoch,
-//       });
-
-//       print('Feedback sent successfully');
-//     } catch (e) {
-//       print('Error sending feedback: $e');
-//     }
-//   }
-// }
+    print('Feedback sent successfully');
+  } catch (e) {
+    print('Error sending feedback: $e');
+  }
+}

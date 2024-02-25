@@ -15,7 +15,7 @@ class MuriousText extends StatelessWidget {
             "Murious",
             style: TextStyle(
               color: Colors.white,
-              fontSize: screenWidth * 0.12,
+              fontSize: screenWidth * 0.1,
               fontFamily: 'Murious',
               fontWeight: FontWeight.w600,
             ),
@@ -23,10 +23,10 @@ class MuriousText extends StatelessWidget {
         ),
         Center(
           child: Text(
-            "The Three Days Panorama",
+            "3-Days Panorama",
             style: TextStyle(
               color: Colors.white,
-              fontSize: screenWidth * 0.082,
+              fontSize: screenWidth * 0.075,
               fontFamily: 'Murious',
               fontWeight: FontWeight.w600,
             ),

@@ -22,7 +22,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
       child: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: screenWidth * 0.05, vertical: screenWidth * 0.03),
+              horizontal: screenWidth * 0.05, vertical: screenWidth * 0.04),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

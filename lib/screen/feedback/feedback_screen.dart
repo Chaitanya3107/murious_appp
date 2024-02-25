@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:murious_appp/screen/feedback/rating.dart';
+import 'package:murious_appp/screen/feedback/send_feedback.dart';
 import 'package:murious_appp/screen/profile/profile.dart';
 
 class FeedbackScreen extends StatefulWidget {
@@ -10,8 +12,23 @@ class FeedbackScreen extends StatefulWidget {
 }
 
 late String feedback; // Variable to store user feedback
+double ratingApp = 0;
 
 class _FeedbackScreenState extends State<FeedbackScreen> {
+  late double ratingApp;
+  late TextEditingController feedbackController;
+  bool feedbackSent =
+      false; // Variable to control the visibility of the feedback sent message
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize the rating to 0
+    ratingApp = 0;
+    // Initialize the feedback text controller
+    feedbackController = TextEditingController();
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -57,6 +74,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
               ),
             ),
           ),
+          // Section to enter feedback
           Padding(
             padding: EdgeInsets.fromLTRB(screenWidth * 0.056,
                 screenWidth * 0.076, screenWidth * 0.056, screenWidth * 0.056),
@@ -75,6 +93,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                 ),
                 child: Column(
                   children: [
+                    // Title: "Send feedback"
                     Padding(
                       padding: EdgeInsets.fromLTRB(
                           0, screenWidth * 0.034, 0, screenWidth * 0.026),
@@ -89,6 +108,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                         ),
                       ),
                     ),
+                    // Horizontal line
                     Container(
                       width: screenWidth * 0.500,
                       decoration: ShapeDecoration(
@@ -101,6 +121,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                         ),
                       ),
                     ),
+                    // Description: "Tell us how your experience was and leave a comment"
                     Padding(
                       padding: EdgeInsets.fromLTRB(
                           screenWidth * 0.027, screenWidth * 0.022, 0, 0),
@@ -118,17 +139,28 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                         ),
                       ),
                     ),
+                    // Widget to handle user rating
                     Padding(
                       padding: EdgeInsets.all(screenWidth * 0.044),
-                      child: RatingFeedback(), // Widget to handle user rating
+                      child: RatingFeedback(
+                        // Callback function sets rating in ratingApp
+                        onRatingUpdate: (rating) {
+                          setState(() {
+                            ratingApp = rating;
+                          });
+                        },
+                      ),
                     ),
+                    // Text input for feedback
                     Padding(
                       padding: EdgeInsets.fromLTRB(
                           screenWidth * 0.032, 0, screenWidth * 0.032, 0),
                       child: Column(
                         children: [
                           SizedBox(height: screenWidth * 0.044),
+                          // Text form field for feedback
                           TextFormField(
+                            controller: feedbackController,
                             onChanged: (val) {
                               // Update the feedback variable when the user types in the text field
                               setState(() {
@@ -136,7 +168,9 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                               });
                             },
                             decoration: InputDecoration(
-                              hintText: 'Leave a comment',
+                              hintText: feedbackSent
+                                  ? 'Feedback Sent'
+                                  : 'Leave a comment',
                               hintStyle: TextStyle(
                                   color: Colors.white, fontFamily: 'Murious'),
                               fillColor: Colors.black.withOpacity(0.2),
@@ -154,11 +188,26 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                             maxLines: 8,
                           ),
                           SizedBox(height: screenWidth * 0.058),
+                          // Button to submit feedback
                           ElevatedButton(
                             onPressed: () {
                               // Handle form submission here
-                              // Assuming you have an instance of FirebaseService
-                              // FirebaseService().sendFeedback(ratingApp, feedback);
+                              sendFeedback(ratingApp, feedback);
+                              // Set feedbackSent to true to display "Feedback Sent" message
+                              setState(() {
+                                feedbackSent = true;
+                              });
+                              // Start a timer to reset feedbackSent to false after 4 seconds
+                              Timer(Duration(seconds: 3), () {
+                                setState(() {
+                                  feedbackSent = false;
+                                });
+                              });
+                              // Clear the text field and reset the rating after sending
+                              feedbackController.clear();
+                              setState(() {
+                                ratingApp = 0;
+                              });
                             },
                             style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(

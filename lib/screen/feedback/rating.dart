@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class RatingFeedback extends StatefulWidget {
-  const RatingFeedback({Key? key}) : super(key: key);
+  const RatingFeedback({Key? key, required this.onRatingUpdate})
+      : super(key: key);
+
+  // Callback function that will be called when the rating is updated
+  final void Function(double) onRatingUpdate;
 
   @override
   State<RatingFeedback> createState() => _RatingFeedbackState();
@@ -78,11 +82,14 @@ class _RatingFeedbackState extends State<RatingFeedback> {
               throw Exception('Invalid rating index');
           }
         },
+        // Callback function invoked when the rating is updated
         onRatingUpdate: (rating) {
           setState(() {
-            ratingApp = rating;
+            ratingApp = rating; // Update the rating value in the state
           });
-          print(rating);
+          // Call the callback function provided by the parent widget
+          widget.onRatingUpdate(rating);
+          print(rating); // Print the selected rating
         },
       ),
     );

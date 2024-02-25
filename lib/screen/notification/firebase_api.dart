@@ -1,4 +1,38 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:murious_appp/services/auth.dart';
+
+class FirebaseApi {
+  String mtoken = '';
+
+  // String uid;
+  final String? uid = AuthService().getCurrentUid();
+
+  // FirebaseApi({required this.uid});
+  final _firebaseMessaging = FirebaseMessaging.instance;
+
+  Future<void> initNotification() async {
+    await _firebaseMessaging.requestPermission();
+    final fCMToken = await _firebaseMessaging.getToken();
+
+    print("Firebase token");
+    print(fCMToken);
+    if (uid != null) {
+      saveToken(fCMToken!, uid!);
+    } else {
+      print('UID is null. Cannot save token.');
+    }
+
+    FirebaseMessaging.onBackgroundMessage(handleBackgroundMessages);
+  }
+}
+
+void saveToken(String token, String uid) async {
+  await FirebaseFirestore.instance
+      .collection('registeredEvents')
+      .doc(uid)
+      .update({'token': token});
+}
 
 Future<void> handleBackgroundMessages(RemoteMessage message) async {
   print('Title: ${message.notification?.title}');
@@ -6,88 +40,56 @@ Future<void> handleBackgroundMessages(RemoteMessage message) async {
   print('Payload: ${message.data}');
 }
 
-class FirebaseApi {
-  final _firebaseMessaging = FirebaseMessaging.instance;
+// class NotificationFirebase extends StatefulWidget {
+//   const NotificationFirebase({Key? key, required this.uid}) : super(key: key);
 
-  Future<void> initNotification() async {
-    await _firebaseMessaging.requestPermission();
-    final fCMToken = await _firebaseMessaging.getToken();
-    print("Firebase token");
-    print(fCMToken);
-    FirebaseMessaging.onBackgroundMessage(handleBackgroundMessages);
-  }
-}
+//   final String uid;
 
-// import 'package:firebase_messaging/firebase_messaging.dart';
-
-// Future<void> handleBackgroundMessages(RemoteMessage message) async {
-//   print('Title: ${message.notification?.title}');
-//   print('Body: ${message.notification?.body}');
-//   print('Payload: ${message.data}');
+//   @override
+//   State<NotificationFirebase> createState() => _NotificationFirebaseState();
 // }
 
-// class FirebaseApi {
-//   final _firebaseMessaging = FirebaseMessaging.instance;
-//   final bool notificationsEnabled;
+// class _NotificationFirebaseState extends State<NotificationFirebase> {
+//   late String? mtoken;
 
-//   FirebaseApi({required this.notificationsEnabled});
-
-//   Future<void> initNotification() async {
-//     if (notificationsEnabled) {
-//       await _firebaseMessaging.requestPermission();
-//       final fCMToken = await _firebaseMessaging.getToken();
-//       print("Firebase token");
-//       print(fCMToken);
-//       FirebaseMessaging.onBackgroundMessage(handleBackgroundMessages);
-//     }
-//   }
-// }
-
-// import 'package:firebase_messaging/firebase_messaging.dart';
-
-// Future<void> handleBackgroundMessages(RemoteMessage message) async {
-//   print('Title: ${message.notification?.title}');
-//   print('Body: ${message.notification?.body}');
-//   print('Payload: ${message.data}');
-// }
-
-// class FirebaseApi {
-//   final _firebaseMessaging = FirebaseMessaging.instance;
-//   // final bool notificationsEnabled;
-
-//   // FirebaseApi({required this.notificationsEnabled});
-
-//   Future<void> initNotification() async {
-//     // if (notificationsEnabled) {
-//     // print(notificationsEnabled);
-//     await _firebaseMessaging.requestPermission();
-//     final fCMToken = await _firebaseMessaging.getToken();
-//     print("Firebase token");
-//     print(fCMToken);
+//   @override
+//   void initState() {
+//     super.initState();
 //     FirebaseMessaging.onBackgroundMessage(handleBackgroundMessages);
-//     // }
+//     requestPermission();
+//     getToken();
 //   }
-// }
 
-// import 'package:firebase_messaging/firebase_messaging.dart';
+//   void requestPermission() async {
+//     FirebaseMessaging messaging = FirebaseMessaging.instance;
+//     NotificationSettings settings = await messaging.requestPermission(
+//       alert: true,
+//       badge: true,
+//       provisional: false,
+//       sound: true,
+//     );
+//   }
 
-// class FirebaseApi {
-//   final _firebaseMessaging = FirebaseMessaging.instance;
-
-//   Future<void> initNotification(bool isEnabled) async {
-//     // Initialize or terminate Firebase Messaging based on user preference
-//     if (isEnabled) {
-//       await _firebaseMessaging.requestPermission();
-//       FirebaseMessaging.onBackgroundMessage(_firebaseBackgroundHandler);
-//     } else {
-//       // Terminate Firebase Messaging if notifications are disabled
-//       FirebaseMessaging.instance.deleteToken();
+//   void getToken() async {
+//     String? token = await FirebaseMessaging.instance.getToken();
+//     if (token != null) {
+//       setState(() {
+//         mtoken = token;
+//         print("Firebase token: $mtoken");
+//       });
+//       saveToken(token);
 //     }
 //   }
 
-//   Future<void> _firebaseBackgroundHandler(RemoteMessage message) async {
-//     print('Title: ${message.notification?.title}');
-//     print('Body: ${message.notification?.body}');
-//     print('Payload: ${message.data}');
+//   void saveToken(String token) async {
+//     await FirebaseFirestore.instance
+//         .collection('registeredEvents')
+//         .doc(widget.uid)
+//         .set({'token': token});
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Placeholder(); // Replace with your actual widget
 //   }
 // }

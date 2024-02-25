@@ -22,7 +22,7 @@ class MajorEventContainer extends StatelessWidget {
       child: Padding(
         // Padding for the whole container
         padding: EdgeInsets.fromLTRB(
-            screenWidth * 0.05, // left
+            screenWidth * 0.00, // left
             screenWidth * 0.05, // top
             screenWidth * 0.00, // right
             screenWidth * 0.00 // bottom
