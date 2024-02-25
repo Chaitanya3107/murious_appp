@@ -526,7 +526,7 @@ class _SevenDesignState extends State<SevenDesign> {
   PlatformFile? pickedFile;
   UploadTask? uploadTask;
   late final String eventName;
-  late String submittedTextDesign;
+  late String submittedTextDesign = '';
 
   void initState() {
     super.initState();
@@ -534,7 +534,7 @@ class _SevenDesignState extends State<SevenDesign> {
     loadSubmittedText();
     Timer.periodic(Duration(minutes: 1), (timer) {
       final now = DateTime.now();
-      if (now.hour == 00 && now.minute == 00) {
+      if (now.hour == 0 && now.minute == 0) {
         resetSubmittedText();
         // submittedText = '';
       }

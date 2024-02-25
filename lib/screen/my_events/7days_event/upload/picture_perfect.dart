@@ -21,7 +21,7 @@ class _PicturePerfectState extends State<PicturePerfect> {
   PlatformFile? pickedFile;
   UploadTask? uploadTask;
   late final String eventName;
-  late String submittedTextPerfect;
+  late String submittedTextPerfect = '';
 
   void initState() {
     super.initState();

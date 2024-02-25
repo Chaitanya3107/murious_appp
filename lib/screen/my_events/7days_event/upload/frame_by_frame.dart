@@ -21,7 +21,7 @@ class _FrameByFrameState extends State<FrameByFrame> {
   PlatformFile? pickedFile;
   UploadTask? uploadTask;
   late final String eventName;
-  late String submittedTextFrame;
+  late String submittedTextFrame = '';
 
   void initState() {
     super.initState();

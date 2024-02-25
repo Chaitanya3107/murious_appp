@@ -21,10 +21,11 @@ class _SevenPhotoState extends State<SevenPhoto> {
   PlatformFile? pickedFile;
   UploadTask? uploadTask;
   late final String eventName;
-  late String submittedTextPhoto;
+  late String submittedTextPhoto = '';
 
   void initState() {
     super.initState();
+    // submittedText = '';
     loadSubmittedText();
 
     Timer.periodic(Duration(minutes: 1), (timer) {
@@ -45,7 +46,7 @@ class _SevenPhotoState extends State<SevenPhoto> {
 
   void saveSubmittedText(String text) async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.setString('submittedTextphoto', text);
+    prefs.setString('submittedTextPhoto', text);
   }
 
   void resetSubmittedText() async {
@@ -74,7 +75,7 @@ class _SevenPhotoState extends State<SevenPhoto> {
     }
 
     // Convert picked file to file object
-    final path = '7Photos/${pickedFile!.name}';
+    final path = 'FrameByFrame/${pickedFile!.name}';
     final file = File(pickedFile!.path!);
     final ref = FirebaseStorage.instance.ref().child(path);
 
@@ -265,7 +266,6 @@ class _SevenPhotoState extends State<SevenPhoto> {
         ),
       );
     }
-
     return centreWidget;
   }
 
