@@ -28,7 +28,7 @@ class _SevenPhotoState extends State<SevenPhoto> {
     // submittedText = '';
     loadSubmittedText();
 
-    Timer.periodic(Duration(minutes: 1), (timer) {
+    Timer.periodic(Duration(minutes: 5), (timer) {
       final now = DateTime.now();
       if (now.hour == 00 && now.minute == 00) {
         resetSubmittedText();

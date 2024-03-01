@@ -532,9 +532,9 @@ class _SevenDesignState extends State<SevenDesign> {
     super.initState();
     // submittedText = '';
     loadSubmittedText();
-    Timer.periodic(Duration(minutes: 1), (timer) {
+    Timer.periodic(Duration(minutes: 5), (timer) {
       final now = DateTime.now();
-      if (now.hour == 0 && now.minute == 0) {
+      if (now.hour == 00 && now.minute == 0) {
         resetSubmittedText();
         // submittedText = '';
       }
