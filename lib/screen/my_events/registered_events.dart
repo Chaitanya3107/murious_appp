@@ -486,121 +486,6 @@ List<EventContainer> eventList = [
 
 bool loading = false;
 
-// class _RegisteredEventsState extends State<RegisteredEvents> {
-//   @override
-//   Widget build(BuildContext context) {
-//     final screenWidth = MediaQuery.of(context).size.width;
-
-//     final List<QuerySnapshot<Object?>> murious =
-//         Provider.of<List<QuerySnapshot<Object?>>>(context);
-//     print(murious[0].docs);
-//     // Check if the first snapshot is not empty and has documents
-//     if (murious.isNotEmpty && murious[0].docs.isNotEmpty) {
-//       // Initialize a list to store the event names
-//       List<String> registeredEventNames = [];
-
-//       // Iterate through each document in the first snapshot (registeredEvents)
-//       for (QueryDocumentSnapshot<Object?> doc in murious[0].docs) {
-//         // Check if the document name (UID) matches the desired UID
-//         if (doc.id == widget.uid) {
-//           // Access the data of the document
-//           Map<String, dynamic> userData = doc.data() as Map<String, dynamic>;
-//           final Map<String, dynamic> eventsData =
-//               userData['events'] as Map<String, dynamic>;
-
-//           // Check if the document contains the 'events' field
-//           if (userData.containsKey('events')) {
-//             // Access the 'events' field and add the event names to the list
-//             List<dynamic> events = userData['events'];
-//             for (var event in events) {
-//               registeredEventNames.add(event['eventName']);
-//             }
-//           }
-
-//           final registeredEvents = eventList.where((event) =>
-//               eventsData[event.eventName] == true &&
-//               eventsData.containsKey(event.eventName));
-//           registeredEventNames.add(registeredEvents as String);
-//         }
-//       }
-
-//       // Use the list of event names to filter the eventList
-//       List<EventContainer> registeredEvents = eventList
-//           .where((event) => registeredEventNames.contains(event.eventName))
-//           .toList();
-
-//       return ListView.builder(
-//         padding:
-//             EdgeInsets.fromLTRB(0, screenWidth * 0.05, 0, screenWidth * 0.2),
-//         itemCount: registeredEvents.length,
-//         itemBuilder: (context, index) {
-//           final event = registeredEvents.elementAt(index);
-//           if (event.eventName == "7 Days, 7 Designs") {
-//             // Return a different container for "7 Days, 7 Designs" event
-//             return SevenDaysContainer(
-//               backgroundImagePath: event.backgroundImagePath,
-//               eventName: event.eventName,
-//               eventDate: event.eventDate,
-//               eventTime: event.eventTime,
-//               eventVenue: event.eventVenue,
-//               date: event.date,
-//               eventDescription: event.eventDescription,
-//             );
-//             // Your SevenDaysContainer implementation
-//           } else if (event.eventName == "7 Days, 7 Photos") {
-//             // Return a different container for "7 Days, 7 Photos" event
-//             return SevenDaysContainer(
-//               backgroundImagePath: event.backgroundImagePath,
-//               eventName: event.eventName,
-//               eventDate: event.eventDate,
-//               eventTime: event.eventTime,
-//               eventVenue: event.eventVenue,
-//               date: event.date,
-//               eventDescription: event.eventDescription,
-//             );
-//           } else if (event.eventName == "Frame by Frame") {
-//             // Return a different container for "Frame by Frame" event
-//             return SevenDaysContainer(
-//               backgroundImagePath: event.backgroundImagePath,
-//               eventName: event.eventName,
-//               eventDate: event.eventDate,
-//               eventTime: event.eventTime,
-//               eventVenue: event.eventVenue,
-//               date: event.date,
-//               eventDescription: event.eventDescription,
-//             );
-//           } else if (event.eventName == "Picture Perfect") {
-//             // Return a different container for "Picture Perfect" event
-//             return SevenDaysContainer(
-//               backgroundImagePath: event.backgroundImagePath,
-//               eventName: event.eventName,
-//               eventDate: event.eventDate,
-//               eventTime: event.eventTime,
-//               eventVenue: event.eventVenue,
-//               date: event.date,
-//               eventDescription: event.eventDescription,
-//             );
-//           } else {
-//             // Return the default EventContainer for other events
-//             return EventContainer(
-//               backgroundImagePath: event.backgroundImagePath,
-//               eventName: event.eventName,
-//               eventDate: event.eventDate,
-//               eventTime: event.eventTime,
-//               eventVenue: event.eventVenue,
-//               date: event.date,
-//               eventDescription: event.eventDescription,
-//             );
-//           }
-//         },
-//       );
-//     } else {
-//       // Return a loading indicator if no data is available yet
-//       return Loading();
-//     }
-//   }
-// }
-
 class _RegisteredEventsState extends State<RegisteredEvents> {
   @override
   Widget build(BuildContext context) {
@@ -619,11 +504,11 @@ class _RegisteredEventsState extends State<RegisteredEvents> {
           }
 
           // Access the list of document snapshots
-          final List<DocumentSnapshot> eventSnapshots = snapshot.data!;
+          final List<DocumentSnapshot>? eventSnapshots = snapshot.data!;
           // print(eventSnapshots[0].data());
 
           // Check if data is available
-          if (eventSnapshots.isEmpty) {
+          if (eventSnapshots!.isEmpty) {
             return Loading();
           }
           //  Check if the document snapshot contains data
@@ -635,27 +520,52 @@ class _RegisteredEventsState extends State<RegisteredEvents> {
             return Loading();
           }
 
-          final filteredEventName = [];
-
-          // Iterate through each document snapshot
+          final List<Map<String, dynamic>?>? allUserData = [];
           for (final eventSnapshot in eventSnapshots) {
-            final Map<String, dynamic> userData =
-                eventSnapshot.data() as Map<String, dynamic>;
-            final Map<String, dynamic> eventsData =
-                userData['events'] as Map<String, dynamic>;
-            // Filter events based on "true" value and add to list
-            eventsData.forEach(
-              (eventsData, value) {
-                if (value == true) {
-                  // print(eventsData);
-                  filteredEventName.add(eventsData);
-                  // print(eventsData);
-                }
-              },
-            );
+            final Map<String, dynamic>? userData =
+                eventSnapshot.data() as Map<String, dynamic>?;
+            if (userData != null) {
+              allUserData?.add(userData);
+            }
           }
+
+          final filteredEventName = [];
+          for (final userData in allUserData!) {
+            final Map<String, dynamic>? eventsData =
+                userData?['events'] as Map<String, dynamic>?;
+            if (eventsData != null) {
+              eventsData.forEach((eventName, value) {
+                if (value == true) {
+                  filteredEventName.add(eventName);
+                }
+              });
+            }
+          }
+
           final registeredEvents = eventList
               .where((event) => filteredEventName.contains(event.eventName));
+
+          // final filteredEventName = [];
+
+          // // Iterate through each document snapshot
+          // for (final eventSnapshot in eventSnapshots) {
+          //   final Map<String, dynamic>? userData =
+          //       eventSnapshot.data() as Map<String, dynamic>;
+          //   final Map<String, dynamic>? eventsData =
+          //       userData?['events'] as Map<String, dynamic>;
+          //   // Filter events based on "true" value and add to list
+          //   eventsData?.forEach(
+          //     (eventsData, value) {
+          //       if (value == true) {
+          //         // print(eventsData);
+          //         filteredEventName.add(eventsData);
+          //         // print(eventsData);
+          //       }
+          //     },
+          //   );
+          // }
+          // final registeredEvents = eventList
+          //     .where((event) => filteredEventName.contains(event.eventName));
           // print(registeredEvents);
 
           return ListView.builder(
