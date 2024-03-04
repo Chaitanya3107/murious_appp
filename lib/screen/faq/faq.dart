@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:murious_appp/screen/faq/faq_screen.dart';
 import 'package:murious_appp/screen/home/home_bg.dart';
-import 'package:murious_appp/screen/my_events/my_event_page.dart';
 
-class MyEventUi extends StatelessWidget {
-  const MyEventUi({super.key});
+class FaqUi extends StatelessWidget {
+  const FaqUi({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +12,10 @@ class MyEventUi extends StatelessWidget {
       body: Stack(
         children: [
           FigmaToCodeApp(), // Background
-          MyEvent(),
+          FAQPage(),
         ],
       ),
     );
+    ;
   }
 }

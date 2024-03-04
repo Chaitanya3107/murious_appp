@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:murious_appp/models/user.dart';
-import 'package:murious_appp/screen/contact/contact.dart';
 import 'package:murious_appp/screen/events/events_ui.dart';
 import 'package:murious_appp/screen/home/home_ui.dart';
 import 'package:murious_appp/screen/my_events/my_events_ui.dart';
-import 'package:murious_appp/screen/notification/notification_ui.dart';
 import 'package:murious_appp/screen/profile/profile_ui.dart';
 import 'package:murious_appp/screen/schedule/schedule_ui.dart';
 
@@ -46,19 +44,6 @@ class _NavigationState extends State<Navigation> {
       body: Stack(
         children: [
           _pages[_currentIndex],
-          // Background screen
-          // AnimatedSwitcher(
-          //   duration: const Duration(milliseconds: 300),
-          //   child: _pages[_currentIndex],
-          //   transitionBuilder: (child, animation) {
-          //     return FadeTransition(
-          //       opacity: animation,
-          //       child: child,
-          //     );
-          //   },
-          // ),
-
-          // Navigation bar
           Positioned(
             bottom: 0,
             left: 0,

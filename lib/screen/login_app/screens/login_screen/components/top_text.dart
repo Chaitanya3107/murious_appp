@@ -89,17 +89,7 @@ class TopText extends StatelessWidget {
       padding: EdgeInsets.all(120),
       alignment: Alignment.topCenter,
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // const Text(
-          //   'Welcome',
-          //   style: TextStyle(
-          //     fontSize: 55,
-          //     fontWeight: FontWeight.w600,
-          //     color: Colors.white,
-          //   ),
-          // ),
           SizedBox(
             width: 150, // Set the width of the image container
             height: 150, // Set the height of the image container

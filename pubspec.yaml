@@ -108,6 +108,7 @@ flutter:
     - assets\images\carosuel\uthe-flash-barry-allen-2023-61-3840x2160.jpg
     - assets\images\carosuel\venom-vs-spider-man-final-stand-ay-3840x2160.jpg
     - assets\images\carosuel\zoom.jpg
+    - assets\images\MURIOUS2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

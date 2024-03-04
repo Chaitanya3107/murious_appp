@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:murious_appp/screen/contact/contact.dart';
+import 'package:murious_appp/screen/faq/faq.dart';
 import 'package:murious_appp/screen/feedback/feedback.dart';
 import 'package:murious_appp/screen/notification/notification_ui.dart';
 import 'package:murious_appp/services/auth.dart';
@@ -22,7 +23,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
       child: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: screenWidth * 0.05, vertical: screenWidth * 0.04),
+              horizontal: screenWidth * 0.05, vertical: screenWidth * 0.06),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -205,7 +206,7 @@ class _ProfiileContainerState extends State<ProfiileContainer> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const ContactUs(),
+                            builder: (context) => const FaqUi(),
                           ),
                         );
                       },
