@@ -88,6 +88,6 @@ List<MajorEventContainer> eventList = [
   MajorEventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
     eventName: "Storage Wars",
-    eventDate: "8th Mar",
+    eventDate: "9th Mar",
   ),
 ];
