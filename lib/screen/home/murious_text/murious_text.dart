@@ -14,7 +14,7 @@ class MuriousText extends StatelessWidget {
             0,
             0, // Adjust padding as needed
             0,
-            screenWidth * 1.688, // Adjust padding as needed
+            screenWidth * 1.69, // Adjust padding as needed
           ),
           child: Center(
             child: Text(

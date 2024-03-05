@@ -67,22 +67,27 @@ class MajorHomeDetails extends StatelessWidget {
 List<MajorEventContainer> eventList = [
   MajorEventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
-    eventName: "Code Express",
+    eventName: "Expanse 3.0",
     eventDate: "8th Mar",
   ),
   MajorEventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
-    eventName: "The Expanse",
+    eventName: "Web-O-Fiest",
     eventDate: "9th Mar",
   ),
   MajorEventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
-    eventName: "Design Race",
+    eventName: "Code Relay",
     eventDate: "10th Mar",
   ),
   MajorEventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
-    eventName: "Fourth Event",
+    eventName: "Code Rumble",
+    eventDate: "8th Mar",
+  ),
+  MajorEventContainer(
+    backgroundImagePath: "assets/images/img_image_454.png",
+    eventName: "Storage Wars",
     eventDate: "8th Mar",
   ),
 ];

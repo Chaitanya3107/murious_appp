@@ -58,8 +58,8 @@ class ContactPage extends StatelessWidget {
             // Contact rows
             contactRow(
                 Icons.call, '6942069420', screenWidth), // Phone number row
-            contactRow(
-                Icons.mail, 'abc@juitsolan.in', screenWidth), // Email row
+            contactRow(Icons.mail, 'technicalclub.jyc@juitsolan.in',
+                screenWidth), // Email row
             contactRow(
               // Address row
               Icons.location_on,

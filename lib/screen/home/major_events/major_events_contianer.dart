@@ -41,13 +41,6 @@ class MajorEventContainer extends StatelessWidget {
             children: [
               // Background image container
               Center(
-                // child: Padding(
-                //   padding: EdgeInsets.fromLTRB(
-                //     screenWidth * 0.00, // left
-                //     screenWidth * 0.08, // top
-                //     screenWidth * 0.00, // right
-                //     screenWidth * 0.00, // bottom
-                //   ),
                 child: Container(
                   alignment: Alignment.center,
                   width: screenWidth * 0.85, // 90% of screen width
@@ -62,23 +55,6 @@ class MajorEventContainer extends StatelessWidget {
                       color: Colors.white,
                       width: screenWidth * 0.003,
                     ),
-                    // boxShadow: [
-                    //   BoxShadow(
-                    //     color: Color.fromARGB(255, 223, 213, 213),
-                    //     offset: const Offset(
-                    //       2,
-                    //       1,
-                    //     ),
-                    //     blurRadius: 0,
-                    //     spreadRadius: 0,
-                    //   ), //BoxShadow
-                    //   BoxShadow(
-                    //     color: const Color.fromARGB(255, 223, 213, 213),
-                    //     offset: const Offset(2.0, 2),
-                    //     blurRadius: 0.0,
-                    //     spreadRadius: 0.0,
-                    //   ), //BoxShadow
-                    // ],
                   ),
                 ),
                 // ),

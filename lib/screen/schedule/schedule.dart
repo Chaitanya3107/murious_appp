@@ -13,22 +13,37 @@ class Schedule extends StatefulWidget {
 }
 
 List<List<ScheduleDetails>> scheduleList = [
+  // Schedule for March 8th
   [
-    ScheduleDetails(time: '5:00pm -\n6:00pm', event: 'The Expanse'),
-    ScheduleDetails(time: '6:00pm -\n7:00pm', event: 'Another Event'),
-    ScheduleDetails(time: '7:00pm -\n8:00pm', event: 'Third Event'),
+    ScheduleDetails(date: 8, time: '5:00pm', event: 'Expanse 3.0'),
+    ScheduleDetails(date: 8, time: '5:30pm -\n11:59pm', event: 'FIFA'),
+    ScheduleDetails(date: 8, time: '5:30pm -\n11:59pm', event: 'Tekken 7'),
   ],
+  // Schedule for March 8th
   [
-    ScheduleDetails(time: '7:00pm -\n8:00pm', event: 'Third Event'),
-    ScheduleDetails(time: '8:00pm -\n9:00pm', event: 'Fourth Event'),
-    ScheduleDetails(time: '7:00pm -\n8:00pm', event: 'Third Event'),
+    ScheduleDetails(date: 9, time: '5:30pm -\n6:30pm', event: 'Make it Print'),
+    ScheduleDetails(date: 9, time: '4:00pm -\n7:30pm', event: 'Jamming'),
+    ScheduleDetails(date: 9, time: '3:30pm -\n5:30pm', event: 'Tambola'),
   ],
+  // Schedule for March 9th
   [
-    ScheduleDetails(time: '7:00pm -\n8:00pm', event: 'Fifth Event'),
-    ScheduleDetails(time: '8:00pm -\n9:00pm', event: 'Sixth Event'),
-    ScheduleDetails(time: '7:00pm -\n8:00pm', event: 'Seventh Event'),
+    ScheduleDetails(date: 9, time: '2:00pm -\n4:00pm', event: 'Web-o-Fiesta'),
+    ScheduleDetails(date: 9, time: '2:00pm -\n6:00pm', event: 'Storage Wars'),
+    ScheduleDetails(date: 9, time: '10:00am -\n12:00pm', event: 'Code Chaos'),
   ],
-  // Add more lists of ScheduleDetails objects as needed
+  // Schedule for March 9th
+  [
+    ScheduleDetails(date: 9, time: '4:00pm -\n5:00pm', event: 'Code Cleanse'),
+    ScheduleDetails(
+        date: 9, time: '8:00pm -\n9:00pm', event: 'Interface Invent'),
+    ScheduleDetails(date: 9, time: '5:30pm -\n11:59pm', event: 'Valorant'),
+  ],
+  // Schedule for March 10th
+  [
+    ScheduleDetails(date: 10, time: '2:00pm -\n6:30pm', event: 'BridgeMaking'),
+    ScheduleDetails(date: 10, time: '10:00am -\n12:00pm', event: 'Code Rumble'),
+    ScheduleDetails(date: 10, time: '2:00pm -\n5:00pm', event: 'Code Relay'),
+  ],
 ];
 
 class _ScheduleState extends State<Schedule> {
@@ -80,7 +95,7 @@ class _ScheduleState extends State<Schedule> {
         child: ListView.builder(
           padding: EdgeInsets.fromLTRB(0, 0, 0,
               screenWidth * 0.14), // Adjust padding based on screen width
-          itemCount: startingDays.length,
+          itemCount: 1,
           itemBuilder: (context, index) {
             final startingDayIndex = index;
             final scheduleIndex =
@@ -90,13 +105,35 @@ class _ScheduleState extends State<Schedule> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 DateSection(
-                  startingDay: startingDays[startingDayIndex],
+                  startingDay: 7,
                   month: 'March',
                 ),
                 SizedBox(height: screenWidth * 0.02),
                 ScheduleContainer(
-                  scheduleDetailsList: scheduleList[scheduleIndex],
-                )
+                  scheduleDetailsList: scheduleList[0],
+                ),
+                ScheduleContainer(
+                  scheduleDetailsList: scheduleList[1],
+                ),
+                DateSection(
+                  startingDay: 8,
+                  month: 'March',
+                ),
+                SizedBox(height: screenWidth * 0.02),
+                ScheduleContainer(
+                  scheduleDetailsList: scheduleList[2],
+                ),
+                ScheduleContainer(
+                  scheduleDetailsList: scheduleList[3],
+                ),
+                DateSection(
+                  startingDay: 9,
+                  month: 'March',
+                ),
+                SizedBox(height: screenWidth * 0.02),
+                ScheduleContainer(
+                  scheduleDetailsList: scheduleList[4],
+                ),
               ],
             );
           },

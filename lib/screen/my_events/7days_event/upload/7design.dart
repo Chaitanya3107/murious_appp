@@ -74,7 +74,7 @@ class _SevenDesignState extends State<SevenDesign> {
     }
 
     // Convert picked file to file object
-    final path = '7Design/${pickedFile!.name}';
+    final path = '3Design/${pickedFile!.name}';
     final file = File(pickedFile!.path!);
     final ref = FirebaseStorage.instance.ref().child(path);
 
@@ -168,7 +168,7 @@ class _SevenDesignState extends State<SevenDesign> {
           ),
         ),
       );
-    } else if (widget.eventName == '7 Days, 7 Designs') {
+    } else if (widget.eventName == '3 Days, 3 Designs') {
       centreWidget = Center(
         child: Padding(
           padding: EdgeInsets.fromLTRB(

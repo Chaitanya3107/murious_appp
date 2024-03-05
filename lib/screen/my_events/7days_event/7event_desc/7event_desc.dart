@@ -206,14 +206,14 @@ class SevenEventDesc extends StatelessWidget {
                         ),
                       ),
                     ),
-                    if (eventName == '7 Days, 7 Designs')
+                    if (eventName == '3 Days, 3 Designs')
                       SevenDesign(eventName: eventName)
-                    else if (eventName == '7 Days, 7 Photos')
-                      SevenPhoto(eventName: eventName)
-                    else if (eventName == 'Picture Perfect')
-                      PicturePerfect(eventName: eventName)
-                    else if (eventName == 'Frame by Frame')
-                      FrameByFrame(eventName: eventName)
+                    // else if (eventName == '7 Days, 7 Photos')
+                    //   SevenPhoto(eventName: eventName)
+                    // else if (eventName == 'Picture Perfect')
+                    //   PicturePerfect(eventName: eventName)
+                    // else if (eventName == 'Frame by Frame')
+                    //   FrameByFrame(eventName: eventName)
                   ],
                 ),
               ),

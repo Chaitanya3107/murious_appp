@@ -27,14 +27,6 @@ class EventContainer extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Center(
-      // child: Padding(
-      //   // Padding for the whole container
-      //   padding: EdgeInsets.fromLTRB(
-      //     screenWidth * 0.05, // left
-      //     screenWidth * 0.06, // top
-      //     screenWidth * 0.00, // right
-      //     screenWidth * 0.02, // bottom
-      //   ),
       child: Container(
         // alignment: Alignment.center, // Center its children
         width: double.infinity, // Take full width
@@ -49,13 +41,6 @@ class EventContainer extends StatelessWidget {
           children: [
             // Background image container
             Center(
-              // child: Padding(
-              //   padding: EdgeInsets.fromLTRB(
-              //     screenWidth * 0.00, // left
-              //     screenWidth * 0.08, // top
-              //     screenWidth * 0.00, // right
-              //     screenWidth * 0.00, // bottom
-              //   ),
               child: Container(
                 alignment: Alignment.center,
                 width: screenWidth * 0.9, // 90% of screen width
@@ -71,23 +56,6 @@ class EventContainer extends StatelessWidget {
                     width: screenWidth * 0.003,
                     // color: Colors.white
                   ),
-                  // boxShadow: [
-                  //   BoxShadow(
-                  //     color: Color.fromARGB(255, 223, 213, 213),
-                  //     offset: const Offset(
-                  //       2,
-                  //       1,
-                  //     ),
-                  //     blurRadius: 0,
-                  //     spreadRadius: 0,
-                  //   ), //BoxShadow
-                  //   BoxShadow(
-                  //     color: const Color.fromARGB(255, 223, 213, 213),
-                  //     offset: const Offset(1.0, -0.1),
-                  //     blurRadius: 0.0,
-                  //     spreadRadius: 0.0,
-                  //   ), //BoxShadow
-                  // ],
                 ),
               ),
               // ),

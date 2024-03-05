@@ -4,17 +4,17 @@ import 'package:provider/provider.dart';
 import 'carousel_state.dart';
 
 final List<String> imgList = [
-  'assets/images/carosuel/1Attack on Titan.jpg',
-  'assets/images/carosuel/5k-mercedes-amg-g63-4x4-dp-3840x2160.jpg',
-  'assets/images/carosuel/2022-The-Batman.jpg',
-  'assets/images/carosuel/dark-legacy-of-black-spider-man-rj-3840x2160.jpg',
-  'assets/images/carosuel/game-of-thrones-season-8-2019-tc-3840x2160.jpg',
-  'assets/images/carosuel/night-king-game-of-thrones-season-8-poster-v2-3840x2160.jpg',
-  'assets/images/carosuel/spider-man-2099-a-hero-from-the-future-js-5120x2880.jpg',
-  'assets/images/carosuel/spiderman-2-ps5-2023-5k-b7-3840x2160.jpg',
-  'assets/images/carosuel/uthe-flash-barry-allen-2023-61-3840x2160.jpg',
-  'assets/images/carosuel/venom-vs-spider-man-final-stand-ay-3840x2160.jpg',
-  'assets/images/carosuel/zoom.jpg',
+  'assets/images/carosuel/DSC_0084.webp',
+  'assets/images/carosuel/DSC_0253.webp',
+  'assets/images/carosuel/DSC_0311.webp',
+  'assets/images/carosuel/IMG_5704.webp',
+  'assets/images/carosuel/DSC_0538.webp',
+  'assets/images/carosuel/IMG_2893.webp',
+  'assets/images/carosuel/IMG_2942.webp',
+  'assets/images/carosuel/IMG_2969.webp',
+  'assets/images/carosuel/IMG_3021.webp',
+  'assets/images/carosuel/IMG_2932.webp',
+  'assets/images/carosuel/IMG_5703.webp',
 ];
 
 class ComplicatedImageDemo extends StatelessWidget {
