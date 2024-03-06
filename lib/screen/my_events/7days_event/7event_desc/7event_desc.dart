@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:murious_appp/screen/my_events/7days_event/upload/7design.dart';
-import 'package:murious_appp/screen/my_events/7days_event/upload/7photos.dart';
-import 'package:murious_appp/screen/my_events/7days_event/upload/frame_by_frame.dart';
-import 'package:murious_appp/screen/my_events/7days_event/upload/picture_perfect.dart';
 
 class SevenEventDesc extends StatelessWidget {
   final String eventName; // Event name

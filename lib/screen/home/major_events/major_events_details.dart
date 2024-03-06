@@ -77,17 +77,12 @@ List<MajorEventContainer> eventList = [
   ),
   MajorEventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
-    eventName: "Code Relay",
+    eventName: "Make it Print",
     eventDate: "10th Mar",
   ),
   MajorEventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
-    eventName: "Code Rumble",
+    eventName: "Picture Perfect",
     eventDate: "8th Mar",
-  ),
-  MajorEventContainer(
-    backgroundImagePath: "assets/images/img_image_454.png",
-    eventName: "Storage Wars",
-    eventDate: "9th Mar",
   ),
 ];

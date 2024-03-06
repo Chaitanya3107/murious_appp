@@ -123,7 +123,8 @@ List<EventContainer> eventList = [
     date: '8th',
     eventTime: "12.30 pm-1:30 pm",
     eventVenue: "CR8",
-    eventDescription: 'Submit your design below for 3 days.',
+    eventDescription:
+        'Submit your design below for 3 days. Name of your file should be your Roll No.',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
@@ -310,40 +311,7 @@ class _RegisteredEventsState extends State<RegisteredEvents> {
                   date: event.date,
                   eventDescription: event.eventDescription,
                 );
-              }
-              // else if (event.eventName == "7 Days, 7 Photos") {
-              //   return SevenDaysContainer(
-              //     backgroundImagePath: event.backgroundImagePath,
-              //     eventName: event.eventName,
-              //     eventDate: event.eventDate,
-              //     eventTime: event.eventTime,
-              //     eventVenue: event.eventVenue,
-              //     date: event.date,
-              //     eventDescription: event.eventDescription,
-              //   );
-              // }
-              // else if (event.eventName == "Frame by Frame") {
-              //   return SevenDaysContainer(
-              //     backgroundImagePath: event.backgroundImagePath,
-              //     eventName: event.eventName,
-              //     eventDate: event.eventDate,
-              //     eventTime: event.eventTime,
-              //     eventVenue: event.eventVenue,
-              //     date: event.date,
-              //     eventDescription: event.eventDescription,
-              //   );
-              // } else if (event.eventName == "Picture Perfect") {
-              //   return SevenDaysContainer(
-              //     backgroundImagePath: event.backgroundImagePath,
-              //     eventName: event.eventName,
-              //     eventDate: event.eventDate,
-              //     eventTime: event.eventTime,
-              //     eventVenue: event.eventVenue,
-              //     date: event.date,
-              //     eventDescription: event.eventDescription,
-              //   );
-              // }
-              else {
+              } else {
                 return EventContainer(
                   backgroundImagePath: event.backgroundImagePath,
                   eventName: event.eventName,
