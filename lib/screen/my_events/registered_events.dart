@@ -124,7 +124,7 @@ List<EventContainer> eventList = [
     eventTime: "12.30 pm-1:30 pm",
     eventVenue: "CR8",
     eventDescription:
-        'Submit your design below for 3 days. Name of your file should be your Roll No.',
+        'Submit your design below for 3 days. Name of your file should be in the format "Name_Surname".',
   ),
   EventContainer(
     backgroundImagePath: "assets/images/img_image_454.png",
