@@ -22,7 +22,7 @@ class ComplicatedImageDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final carouselState = Provider.of<CarouselState>(context, listen: false);
-    final controller = CarouselController();
+    final CarouselSliderController controller = CarouselSliderController();
 
     // Ensure the currentIndex is not null before using it
     WidgetsBinding.instance.addPostFrameCallback((_) {

@@ -16,7 +16,7 @@ class MajorHomeDetails extends StatelessWidget {
         Provider.of<MajorEventState>(context, listen: false);
 
     // Define the CarouselController
-    final CarouselController _controller = CarouselController();
+    final CarouselSliderController _controller = CarouselSliderController();
 
     // Set the current page when the frame is rendered
     WidgetsBinding.instance!.addPostFrameCallback((_) {
